@@ -43,12 +43,13 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        padding: 1em;
+        padding: 0 1em;
     }
     nav ul{
         display: flex;
-        padding: 1em;
-        gap: 3em;
+        padding: 1.2em;
+        gap: 4em;
+        font-size: 14px;
     }
     nav a{
         color: white;
@@ -63,11 +64,11 @@
     .nav-border{
         width: 100%;
         display: flex;
+        padding: 0 .5em;
     }
     .border-1, .border-2{
-        background-color: #a7a599a9;
-        height: .5em;
-        border-radius: 1em;
+        background-color: #e5dfd352;
+        height: .35em;
     }
     .border-1{
         width: 5%;
@@ -83,45 +84,49 @@
         padding: 1em 5em;
     }
     h1{
-        font-size: 3em ;
-        margin: 0 .5em;
+        font-family: var(--logo-font);
+        font-size: 3.5em ;
+        margin: 0 .3em;
         position: relative;
-        bottom: 0.7em;
+        bottom: 0.8em;
     }
     h1, h2, a,  .skill-bar ul{
         text-transform: uppercase;
     }
-    h1, h2{
-        font-family: var(--hero-title-font);
+    h1, h2, a{
         color: var(--accent-light-color);
     }
     h2{
-        font-size: 7em;
+        font-family: var(--hero-title-font);
+        font-size: 7.5em;
         width: 6em;
-        letter-spacing: 4px;
+        letter-spacing: .1em;
         line-height: 106%;
         text-align: right;
     }
     h1 span, h2 span, .hero-title a{
         color: var(--primary-color);
     }
-
+    h3, a, .skill-bar ul{
+        letter-spacing: .1em;
+    } 
     h3{
+        font-size: 1.3em;
         color: var(--accent-light-color);
         font-family: var(--header-font);
         letter-spacing: .5em;
         padding: 1em 0;
     }
     .hero-title a{
-        margin: 0 .5em;
-        padding: 0.2em 1.5em;
+        margin: .5em;
+        padding: 0.2em 2em;
+        font-size: 14px;
         border: solid 2px var(--primary-color);
     }
     .hero-title a:hover{
         color: white;
         border-color: white;
     }
-
     .skill-bar{
         background-color: var(--secondary-color);
         width: 100%;
@@ -131,7 +136,6 @@
         justify-content: center;
         align-items: center;
     }
-
     .skill-bar ul{
         display: flex;
         justify-content: space-around;
