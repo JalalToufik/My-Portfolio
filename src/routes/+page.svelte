@@ -1,24 +1,23 @@
-<div class="hero-bg">
-    <header>
-        <nav>
-            <ul>
-                <li><a href="/about">About</a></li>
-                <li><a href="/projects">Projects</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-            <div class="nav-border">
-                <div class="border-1"></div>
-                <h1><span>J</span>T</h1>
-                <div class="border-2"></div>
-            </div>
-        </nav>
-    </header>
+<script>
+	import { Header } from '../lib/index';
+</script>
 
-    <section class="hero-title">
-        <h2> <span>J</span>alal Toufik</h2>
-        <h3> Frontend Developer </h3>
-        <a href="/contact">Contact me</a>
-    </section>  
+<div class="hero-bg">
+
+    <Header />
+
+    <div class="hero-container">
+        <section class="hero-title">
+            <h2> Front<span>end</span></h2>
+            <h2> Developer</h2>
+            <div>
+                <h3> Jalal Toufik</h3>
+            </div>
+        </section>  
+        <div>
+            <a class="btn-contact" href="/contact">Contact me</a>
+        </div>
+    </div>  
 </div>
 
 <div class="skill-bar">
@@ -33,97 +32,73 @@
 <style>
     .hero-bg{
         background-image: url(/jalal.png);
+        background-color: black;
         background-repeat: no-repeat;
-        background-position: top left;
+        height: 70vh;
+        background-position-x: 50%;
         background-size: cover;
-        width: 100%;
-        height: 80vh;
     }
-    nav{
+
+    .hero-container{
         display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        padding: 0 1em;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        height: 80%;
+        padding: 2em;
     }
-    nav ul{
+
+    .hero-container div{
         display: flex;
-        padding: 1.2em;
-        gap: 4em;
-        font-size: 14px;
-    }
-    nav a{
-        color: white;
-        font-family: var(--header-font);
-    }
-    nav a:active{
-        color: var(--accent-color);
-    }
-    nav a:hover{
-        color: var(--primary-color);
-    }
-    .nav-border{
-        width: 100%;
-        display: flex;
-        padding: 0 .5em;
-    }
-    .border-1, .border-2{
-        background-color: #e5dfd352;
-        height: .35em;
-    }
-    .border-1{
-        width: 5%;
-    }
-    .border-2{
-        width: 95%;
+        justify-content: flex-end;
     }
     .hero-title{
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: flex-end;
-        padding: 1em 5em;
+        align-items: flex-start;
+        padding: 1em;
     }
-    h1{
-        font-family: var(--logo-font);
-        font-size: 3.5em ;
-        margin: 0 .3em;
-        position: relative;
-        bottom: 0.8em;
-    }
-    h1, h2, a,  .skill-bar ul{
+    h2, a,  .skill-bar ul{
         text-transform: uppercase;
     }
-    h1, h2, a{
+    h2, a{
         color: var(--accent-light-color);
     }
     h2{
         font-family: var(--hero-title-font);
-        font-size: 7.5em;
+        font-size: 2.5em;
         width: 6em;
         letter-spacing: .1em;
         line-height: 106%;
         text-align: right;
     }
-    h1 span, h2 span, .hero-title a{
+    h2 span, .hero-title {
         color: var(--primary-color);
     }
     h3, a, .skill-bar ul{
         letter-spacing: .1em;
     } 
-    h3{
-        font-size: 1.3em;
-        color: var(--accent-light-color);
-        font-family: var(--header-font);
-        letter-spacing: .5em;
+    .hero-title div{
+        display: flex;
+        width: 100%;
+        justify-content: flex-start;
         padding: 1em 0;
     }
-    .hero-title a{
-        margin: .5em;
-        padding: 0.2em 2em;
-        font-size: 14px;
-        border: solid 2px var(--primary-color);
+    h3{
+        font-size: .8em;
+        color: var(--accent-light-color);
+        font-family: var(--hero-title-font);
+        text-transform: uppercase;
     }
-    .hero-title a:hover{
+    .btn-contact{
+        width: 10em;
+        padding: 0.2em 1em;
+        font-size: 14px;
+        border-radius: 2em;
+        border: solid 2px var(--accent-light-color);
+        color: var(--accent-light-color);
+    }
+    .btn-contact:hover{
         color: white;
         border-color: white;
     }
