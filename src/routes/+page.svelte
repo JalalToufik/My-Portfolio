@@ -6,18 +6,18 @@
 
     <Header />
 
-    <div class="hero-container">
-        <section class="hero-title">
-            <h2> Front<span>end</span></h2>
-            <h2> Developer</h2>
+    <section class="hero-container">
+        <div class="hero-title">
+            <h2> 
+                Front<span>end</span>
+                Developer
+            </h2>
+            <h3> Jalal Toufik</h3>
             <div>
-                <h3> Jalal Toufik</h3>
+                <a class="btn-contact" href="/contact">Contact me</a>
             </div>
-        </section>  
-        <div>
-            <a class="btn-contact" href="/contact">Contact me</a>
         </div>
-    </div>  
+    </section>  
 </div>
 
 <div class="skill-bar">
@@ -44,12 +44,13 @@
         flex-direction: column-reverse;
         justify-content: space-between;
         height: 95%;
-        padding: 2em;
+        padding: 3em;
     }
 
-    .hero-container div{
+    .hero-title{
         display: flex;
         justify-content: flex-end;
+        align-items: start;
     }
     .hero-title{
         width: 100%;
@@ -66,10 +67,9 @@
     h2{
         font-family: var(--hero-title-font);
         font-size: 2.5em;
-        width: 6em;
         letter-spacing: .1em;
         line-height: 106%;
-        text-align: right;
+        max-width: 7em;
     }
     h2 span, .hero-title {
         color: var(--primary-color);
@@ -78,9 +78,12 @@
         letter-spacing: .1em;
     } 
     .hero-title div{
+        position: absolute;
+        top: 4em;
+        right: 2em;
         display: flex;
-        width: 100%;
-        justify-content: flex-start;
+        justify-content: flex-end;
+        align-items: start;
         padding: 1em 0;
     }
     h3{
@@ -88,6 +91,7 @@
         color: var(--accent-light-color);
         font-family: var(--hero-title-font);
         text-transform: uppercase;
+        padding: 1em 0 0 0;
     }
     .btn-contact{
         width: 7.5em;
@@ -115,6 +119,56 @@
         display: flex;
         justify-content: space-around;
         width: 100%;
+    }
+
+    /* MEDIA QUERY MOBILE = 400px */
+    @media (min-width: 25rem) {
+
+    }
+
+    /* MEDIA QUERY TABLET = 768px */
+    @media (min-width: 48rem) {
+        /* .hero-container{
+            padding: 4em;
+            justify-content: flex-start;
+            align-items: start;
+            height: 90%;
+        }
+        .hero-title div{
+            top: 31em;
+            left: 4em;
+            justify-content: flex-start;
+        }
+        */
+
+        .hero-title{
+            display: grid;
+            justify-content: start;
+            align-items: end;
+            grid-template-columns: 2fr 1fr;
+            grid-template-rows: 3fr 1fr;
+            grid-template-areas:
+            'title title'
+            'button myName';
+        }
+        h2{
+            grid-area: title;
+            font-size: 4.5em;
+            margin: 1em 0;
+        }
+        h3{
+            grid-area: myName;
+            text-align: right;
+            padding: 0;
+        }
+
+        .hero-title div{
+            grid-area: button;
+            position:static;
+            justify-content: flex-start;
+            padding: 0;
+        }
+
     }
 
 

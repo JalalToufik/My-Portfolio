@@ -1,8 +1,8 @@
 <header>
     <nav>
         <ul>
-            <li><a href="/about">About,</a></li>
-            <li><a href="/projects">Projects,</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/projects">Projects</a></li>
             <li><a href="/contact">Contact</a></li>
         </ul>
         <div class="nav-border">
@@ -14,18 +14,17 @@
 </header>
 
 <style>
-
     nav{
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        padding: 0 .5em;
+        padding: 0 1em;
     }
     nav ul{
         display: flex;
         padding: .5em;
-        gap: .5em;
-        font-size: 14px;
+        gap: 1em;
+        font-size: 1em;
     }
     nav a{
         color: var(--accent-light-color);
@@ -48,23 +47,37 @@
         height: .1em;
     }
     .border-1{
-        width: 5%;
+        width: 1.5em;
     }
     .border-2{
         width: 95%;
     }
-
     h1{
         font-family: var(--logo-font);
-        font-size: 1.5em ;
+        font-size: 2em;
         color: var(--primary-color);
         margin: 0 .3em;
         position: relative;
         bottom: 0.8em;
         text-transform: uppercase;
     }
-
     h1 span{
         color: var(--accent-light-color);
+    }
+
+    /* MEDIA QUERY MOBILE = 400px */
+    @media (min-width: 25rem) {
+
+    }
+
+    /* MEDIA QUERY TABLET = 768px */
+    @media (min-width: 48rem) {
+        nav ul{
+                gap: 2.5em;
+                padding: 1em;
+            }
+        h1{
+            font-size: 2.5em;
+        }
     }
 </style>
