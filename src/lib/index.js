@@ -4,7 +4,7 @@
 // ========== Atoms ==========
 
 // ========== Molecules ==========
-
+export { default as HeroHeader } from './molecule/hero-header.svelte'
 // ========== Organisms ==========
 
-export { default as Header } from './organism/Header.svelte'
+export { default as Navigation } from './organism/navigation.svelte'

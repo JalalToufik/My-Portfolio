@@ -2,20 +2,19 @@
 
 </script>
 
-<header>
-    <nav>
-        <ul>
-            <li><a href="/about">About</a></li>
-            <li><a href="/projects">Projects</a></li>
-            <li><a href="/contact">Contact</a></li>
-        </ul>
-        <div class="nav-border">
-            <div class="border-1"></div>
-            <a href="/" class="logo"><span>J</span>T</a>
-            <div class="border-2"></div>
-        </div>
-    </nav>
-</header>
+
+<nav>
+    <ul>
+        <li><a href="/about">About</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+    <div class="nav-border">
+        <div class="border-1"></div>
+        <a href="/" class="logo"><span>J</span>T</a>
+        <div class="border-2"></div>
+    </div>
+</nav>
 
 <style>
     nav{
