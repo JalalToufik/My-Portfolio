@@ -43,7 +43,7 @@
         display: flex;
         flex-direction: column-reverse;
         justify-content: space-between;
-        height: 80%;
+        height: 95%;
         padding: 2em;
     }
 
@@ -56,7 +56,6 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        padding: 1em;
     }
     h2, a,  .skill-bar ul{
         text-transform: uppercase;
@@ -85,15 +84,16 @@
         padding: 1em 0;
     }
     h3{
-        font-size: .8em;
+        font-size: 1.3em;
         color: var(--accent-light-color);
         font-family: var(--hero-title-font);
         text-transform: uppercase;
     }
     .btn-contact{
-        width: 10em;
-        padding: 0.2em 1em;
-        font-size: 14px;
+        width: 7.5em;
+        padding: 0.2em .5em;
+        font-size: 18px;
+        letter-spacing: -1px;
         border-radius: 2em;
         border: solid 2px var(--accent-light-color);
         color: var(--accent-light-color);

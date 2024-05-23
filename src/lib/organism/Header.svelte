@@ -41,6 +41,7 @@
         width: 100%;
         display: flex;
         padding: 0 .5em;
+        height: .1em;
     }
     .border-1, .border-2{
         background-color: #e5dfd352;
