@@ -2,36 +2,41 @@
 	import { Header } from '../lib/index';
 </script>
 
-<div class="hero-bg">
+<section class="hero-bg">
 
     <Header />
 
-    <section class="hero-container">
+    <div class="hero-container">
         <div class="hero-title">
-            <h2> 
+            <h1> 
                 Front<span>end</span>
                 Developer
-            </h2>
-            <h3> Jalal Toufik</h3>
+            </h1>
+            <p> Jalal Toufik</p>
             <div>
                 <a class="btn-contact" href="/contact">Contact me</a>
             </div>
         </div>
-    </section>  
-</div>
+    </div>  
+</section>
 
-<div class="skill-bar">
+<section class="skill-bar">
     <ul>
         <li>// CSS //</li>
         <li>// HTML //</li>
         <li>// Javascript //</li>
     </ul>
-</div>
+</section>
+
+<main>
+    <h2>About me</h2>
+</main>
 
 
 <style>
     .hero-bg{
         background-image: url(/jalal.png);
+        position: sticky;
         background-color: black;
         background-repeat: no-repeat;
         height: 70vh;
@@ -58,23 +63,23 @@
         flex-direction: column;
         align-items: flex-start;
     }
-    h2, a,  .skill-bar ul{
+    h1, a,  .skill-bar ul{
         text-transform: uppercase;
     }
-    h2, a{
+    h1, a{
         color: var(--accent-light-color);
     }
-    h2{
+    h1{
         font-family: var(--hero-title-font);
         font-size: 2.5em;
         letter-spacing: .1em;
         line-height: 106%;
         max-width: 7em;
     }
-    h2 span, .hero-title {
+    h1 span, .hero-title {
         color: var(--primary-color);
     }
-    h3, a, .skill-bar ul{
+    p, a, .skill-bar ul{
         letter-spacing: .1em;
     } 
     .hero-title div{
@@ -86,7 +91,7 @@
         align-items: start;
         padding: 1em 0;
     }
-    h3{
+    .hero-title p{
         font-size: 1.3em;
         color: var(--accent-light-color);
         font-family: var(--hero-title-font);
@@ -128,18 +133,9 @@
 
     /* MEDIA QUERY TABLET = 768px */
     @media (min-width: 48rem) {
-        /* .hero-container{
-            padding: 4em;
-            justify-content: flex-start;
-            align-items: start;
+        .hero-container{
             height: 90%;
         }
-        .hero-title div{
-            top: 31em;
-            left: 4em;
-            justify-content: flex-start;
-        }
-        */
 
         .hero-title{
             display: grid;
@@ -151,12 +147,12 @@
             'title title'
             'button myName';
         }
-        h2{
+        h1{
             grid-area: title;
             font-size: 4.5em;
             margin: 1em 0;
         }
-        h3{
+        .hero-title p{
             grid-area: myName;
             text-align: right;
             padding: 0;
@@ -168,7 +164,6 @@
             justify-content: flex-start;
             padding: 0;
         }
-
     }
 
 

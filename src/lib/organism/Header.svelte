@@ -1,3 +1,7 @@
+<script>
+
+</script>
+
 <header>
     <nav>
         <ul>
@@ -7,7 +11,7 @@
         </ul>
         <div class="nav-border">
             <div class="border-1"></div>
-            <h1><span>J</span>T</h1>
+            <a href="/" class="logo"><span>J</span>T</a>
             <div class="border-2"></div>
         </div>
     </nav>
@@ -52,7 +56,8 @@
     .border-2{
         width: 95%;
     }
-    h1{
+    .logo{
+        height: 1.7em;
         font-family: var(--logo-font);
         font-size: 2em;
         color: var(--primary-color);
@@ -61,7 +66,12 @@
         bottom: 0.8em;
         text-transform: uppercase;
     }
-    h1 span{
+
+    .logo:hover {
+		cursor: pointer;
+        transform: scale(1.1);
+	}
+    .logo span{
         color: var(--accent-light-color);
     }
 
@@ -76,7 +86,7 @@
                 gap: 2.5em;
                 padding: 1em;
             }
-        h1{
+        .logo{
             font-size: 2.5em;
         }
     }
