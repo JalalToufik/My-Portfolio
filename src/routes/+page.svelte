@@ -82,7 +82,7 @@
         display: grid;
         justify-items: center;
         align-items: center;
-        grid-template-columns: 2em 2fr 2em ;
+        grid-template-columns: 3em 2fr 3em ;
         grid-template-rows: 40% 2fr 10em;
         grid-template-areas:
         "item1 title item2"
