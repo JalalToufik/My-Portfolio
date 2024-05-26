@@ -5,13 +5,13 @@
 
 <nav>
     <ul>
-        <li><a href="/about">About</a></li>
-        <li><a href="/projects">Projects</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Projects">Projects</a></li>
+        <li><a href="#Contact">Contact</a></li>
     </ul>
     <div class="nav-border">
         <div class="border-1"></div>
-        <a href="/" class="logo"><span>J</span>T</a>
+        <a href="/" class="logo">J<span>T</span></a>
         <div class="border-2"></div>
     </div>
 </nav>
@@ -64,6 +64,7 @@
         position: relative;
         bottom: 0.8em;
         text-transform: uppercase;
+        letter-spacing: -4px;
     }
 
     .logo:hover {

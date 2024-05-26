@@ -2,7 +2,7 @@
 
 </script>
 
-<section class="about">
+<section id="About" class="about">
     <article>
         <h2>About me</h2>
         <p>
@@ -38,11 +38,11 @@
         width: 1.5em;
     }
     article::before{    
-        bottom: 10.5em;
+        bottom: 14em;
         left: 0;
     }
     article::after{    
-        right: 0;
+        left: 0;
     }
     .about::before{
         grid-area: item1;
@@ -65,16 +65,25 @@
         padding: .2em 0;
     }
 
+        /* MEDIA QUERY TABLET = 434px */
+        @media (min-width: 27.2rem) {
+            article::after{    
+                right: 0;
+                left: unset;
+            }
+        }
+
+
     /* MEDIA QUERY TABLET = 768px */
     @media (min-width: 48rem) {
         .about{
-            padding: 0 2em;
+            padding: 0 1.5em;
         }
         .about article{
             padding: 2em;
         }
         article::before, article::after{
-            width: 3.5em;
+            width: 3em;
         }
     }
 </style>

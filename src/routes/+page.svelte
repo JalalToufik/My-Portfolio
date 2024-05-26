@@ -5,12 +5,10 @@
 <header>
     <Navigation />
     <HeroHeader />
-    <SkillBar />
 </header>
 
-
-
 <main>
+    <SkillBar />
     <AboutMe />
     <Projects />
 </main>
@@ -23,8 +21,8 @@
         background-size: cover;
         background-color: rgb(51, 51, 51);
         background-repeat: no-repeat;
-        height: 70vh;
-        background-position-x: 55%;
+        height: 65vh;
+        background-position-x: 35%;
         background-position-y: -55px;
     }
 

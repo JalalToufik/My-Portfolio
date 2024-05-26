@@ -2,7 +2,7 @@
 
 </script>
 
-<section class="projects">
+<section id="Projects" class="projects">
     <h2>Projects</h2>
 </section>
 

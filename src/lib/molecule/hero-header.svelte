@@ -5,12 +5,12 @@
 <div class="hero-container">
     <div class="hero-title">
         <h1> 
-            Front<span>end</span>
+            <span>Front</span>End
             Developer
         </h1>
         <p> Jalal Toufik</p>
         <div>
-            <a class="btn-contact" href="/contact">Contact me</a>
+            <a class="btn-contact" href="#contact">Contact me</a>
         </div>
     </div>
 </div>  
@@ -19,8 +19,6 @@
 
 .hero-container{
         display: flex;
-        flex-direction: column-reverse;
-        justify-content: space-between;
         height: 95%;
         padding: 3em;
     }
@@ -44,8 +42,8 @@
     }
     h1{
         font-family: var(--hero-title-font);
-        font-size: 2.5em;
-        letter-spacing: .1em;
+        font-size: 3.5em;
+        letter-spacing: .05em;
         line-height: 106%;
         max-width: 7em;
     }
@@ -60,7 +58,6 @@
         top: 4em;
         right: 2em;
         display: flex;
-        justify-content: flex-end;
         align-items: start;
         padding: 1em 0;
     }
@@ -79,19 +76,19 @@
         border-radius: 2em;
         border: solid 2px var(--accent-light-color);
         color: var(--accent-light-color);
+        transition: ease-out .3s;
     }
     .btn-contact:hover{
-        color: white;
-        border-color: white;
+        color: var(--primary-color);
+        border-color: var(--primary-color);
+        transform: scale(1.03);
     }
 
     /* MEDIA QUERY TABLET = 768px */
     @media (min-width: 48rem) {
         .hero-container{
-
             height: 90%;
         }
-
         .hero-title{
             display: grid;
             justify-content: start;
@@ -104,15 +101,14 @@
         }
         h1{
             grid-area: title;
-            font-size: 4.5em;
-            margin: 1em 0;
+            font-size: 5.5em;
+            margin: .5em 0;
         }
         .hero-title p{
             grid-area: myName;
             text-align: right;
             padding: 0;
         }
-
         .hero-title div{
             grid-area: button;
             position:static;
