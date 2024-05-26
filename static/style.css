@@ -39,3 +39,9 @@ html {
 body{
     background-color: var(--accent-light-color);
 }
+
+h2{
+    font-size: 4.5em;
+    text-transform: uppercase;
+    font-family: "League Gothic", sans-serif;
+}
