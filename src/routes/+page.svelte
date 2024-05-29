@@ -21,7 +21,7 @@
         background-size: cover;
         background-color: rgb(51, 51, 51);
         background-repeat: no-repeat;
-        height: 65vh;
+        height: 75vh;
         background-position-x: 35%;
         background-position-y: -55px;
     }

@@ -17,7 +17,7 @@
 
 <style>
 
-.hero-container{
+    .hero-container{
         display: flex;
         height: 95%;
         padding: 3em;
@@ -42,7 +42,7 @@
     }
     h1{
         font-family: var(--hero-title-font);
-        font-size: 3.5em;
+        font-size: 2.5em;
         letter-spacing: .05em;
         line-height: 106%;
         max-width: 7em;
@@ -72,6 +72,7 @@
         width: 7.5em;
         padding: 0.2em .5em;
         font-size: 18px;
+        z-index: 0;
         letter-spacing: -1px;
         border-radius: 2em;
         border: solid 2px var(--accent-light-color);
@@ -84,11 +85,15 @@
         transform: scale(1.03);
     }
 
+    /* MEDIA QUERY MOBILE = 400px */
+    @media (min-width: 25rem) {
+        h1{
+            font-size: 3.5em;
+        }
+}
+
     /* MEDIA QUERY TABLET = 768px */
     @media (min-width: 48rem) {
-        .hero-container{
-            height: 90%;
-        }
         .hero-title{
             display: grid;
             justify-content: start;

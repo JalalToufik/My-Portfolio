@@ -2,6 +2,8 @@
 
 
 // ========== Atoms ==========
+export { default as OpenMenu } from './atom/open-menu.svg'
+export { default as CloseMenu } from './atom/close-menu.svg'
 
 // ========== Molecules ==========
 export { default as HeroHeader } from './molecule/hero-header.svelte'

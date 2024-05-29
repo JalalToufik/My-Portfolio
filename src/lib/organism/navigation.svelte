@@ -1,33 +1,83 @@
 <script>
+	import { OpenMenu, CloseMenu } from '$lib/index.js';
+	let navActive = false;
 
+    const toggleNav = () => {
+        navActive = !navActive;
+    };
 </script>
 
-
-<nav>
-    <ul>
-        <li><a href="#About">About</a></li>
-        <li><a href="#Projects">Projects</a></li>
-        <li><a href="#Contact">Contact</a></li>
-    </ul>
+<section>
     <div class="nav-border">
-        <div class="border-1"></div>
         <a href="/" class="logo">J<span>T</span></a>
-        <div class="border-2"></div>
     </div>
-</nav>
+    <!-- svelte-ignore a11y-invalid-attribute -->
+    <a href="javascript:void(0)" class="menu-icon" on:click={toggleNav}>
+        <img class="menu" src={navActive ? CloseMenu : OpenMenu} alt="Menu button"/>
+    </a>
+    <nav class:active={navActive}>
+        <ul role="menu">
+            <li><a href="#About" on:click={toggleNav}>About</a></li>
+            <li><a href="#Projects" on:click={toggleNav}>Projects</a></li>
+            <li><a href="#Contact" on:click={toggleNav}>Contact</a></li>
+        </ul>
+    </nav>
+</section>
 
 <style>
+    section{
+        width: 100%;
+    }
     nav{
-        display: flex;
         flex-direction: column;
         align-items: flex-end;
+        background-color: var(--secondary-color);
         padding: 0 1em;
+        display: none;
+        inset: 0;
+        opacity: 0;
+        z-index: 99;    
+        transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+    }
+    nav.active {
+        display: block;
+        position: absolute;
+        opacity: 1;
+        z-index: 1;
+	}
+    nav.active + .menu{
+        padding: .7em 1em;
     }
     nav ul{
         display: flex;
-        padding: .5em;
-        gap: 1em;
-        font-size: 1em;
+        flex-direction: column;
+        align-items: center;
+        gap: 2.5em;
+        padding: 5em 0;
+        font-size: 2em;
+    }
+
+    nav li{
+        width: 80%;
+        border-bottom: 2px solid white;
+    }
+
+    nav li:hover{
+        border-color: var(--primary-color);
+    }
+
+    nav li:hover a{
+        color: var(--primary-color);
+    }
+
+    .menu{
+        background: none;
+        transform: rotate(180deg);
+        padding: 1em;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 100;
     }
     nav a{
         color: var(--accent-light-color);
@@ -36,23 +86,27 @@
     nav a:active{
         color: var(--accent-color);
     }
-    nav a:hover{
-        color: var(--primary-color);
-    }
+
     .nav-border{
         width: 100%;
         display: flex;
-        padding: 0 .5em;
+        padding: 0 1em;
         height: .1em;
+        z-index: 99;
+        position: absolute;
+        top: 3em;
+        left: 0;
     }
-    .border-1, .border-2{
+    .nav-border::before, .nav-border::after{
         background-color: #e5dfd352;
-        height: .1em;
+        height: .15em;
     }
-    .border-1{
-        width: 1.5em;
+    .nav-border::before{
+        content: "";
+        width: 2em;
     }
-    .border-2{
+    .nav-border::after{
+        content: "";
         width: 95%;
     }
     .logo{
@@ -65,6 +119,7 @@
         bottom: 0.8em;
         text-transform: uppercase;
         letter-spacing: -4px;
+        z-index: 99;
     }
 
     .logo:hover {
@@ -75,17 +130,44 @@
         color: var(--accent-light-color);
     }
 
-    /* MEDIA QUERY MOBILE = 400px */
-    @media (min-width: 25rem) {
+    @media (min-width: 56.25em) {
 
+        .menu {
+            display: none;
+        }
+        nav {
+            inset: unset;
+            display: flex;
+            background: none;
+            padding: .7em 2.5em;
+            width: 100%;
+            opacity: 1;
+            transition: none;
+        }
+        nav ul{
+            font-size: 1em;
+            flex-direction: row;
+            padding: 0;
+        }
+        nav li{
+            width: inset;
+            border-bottom: none;
+        }
+        .nav-border{
+            padding: 0 2.5em;
+        }
+        .nav-border::before{
+            width: .5em;
+        }
+        .nav-border::after{
+            content: "";
+            width: 100%;
+        }
     }
 
     /* MEDIA QUERY TABLET = 768px */
     @media (min-width: 48rem) {
-        nav ul{
-                gap: 2.5em;
-                padding: 1em;
-            }
+
         .logo{
             font-size: 2.5em;
         }
