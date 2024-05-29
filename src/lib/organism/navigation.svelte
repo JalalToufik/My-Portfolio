@@ -1,6 +1,6 @@
 <script>
 	import { OpenMenu, CloseMenu } from '$lib/index.js';
-	let navActive = false;
+    let navActive = false;
 
     const toggleNav = () => {
         navActive = !navActive;
@@ -33,21 +33,24 @@
         align-items: flex-end;
         background-color: var(--secondary-color);
         padding: 0 1em;
-        display: none;
-        inset: 0;
+        visibility: hidden;
+        transform: translateY(-100%);
         opacity: 0;
-        z-index: 99;    
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
         transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out;
+        z-index: 99;
     }
     nav.active {
-        display: block;
-        position: absolute;
+        visibility: visible;
+        transform: translateY(0);
         opacity: 1;
-        z-index: 1;
+        transition: transform 0.25s ease-in-out, opacity 0.25s ease-in-out visibility 0s linear 0.5s;
 	}
-    nav.active + .menu{
-        padding: .7em 1em;
-    }
+
     nav ul{
         display: flex;
         flex-direction: column;
@@ -136,14 +139,16 @@
             display: none;
         }
         nav {
-            inset: unset;
+
             display: flex;
             background: none;
             padding: .7em 2.5em;
             width: 100%;
             opacity: 1;
-            transition: none;
+            visibility: visible;
+            transform: none;
         }
+
         nav ul{
             font-size: 1em;
             flex-direction: row;
