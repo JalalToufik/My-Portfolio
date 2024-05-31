@@ -2,7 +2,7 @@
 
 </script>
 
-<section id="About" class="about">
+<section id="About">
     <article>
         <h2>About me</h2>
         <p>
@@ -16,14 +16,15 @@
 
 <style>
  /* ======= Article ======= */
-    .about{
+    section{
         display: grid;
         justify-items: center;
         align-items: center;
         grid-template-columns: 3em 2fr 3em;;
         grid-template-areas: "item1 title item2";
+        min-height: 60vh;
     }
-    .about::before, .about::after {
+    section::before, section::after {
         content: "";
         border: 1px solid var(--secondary-color);
         height: 100%;
@@ -38,19 +39,19 @@
         width: 1.5em;
     }
     article::before{    
-        bottom: 14em;
+        bottom: 6.5em;
         left: 0;
     }
     article::after{    
         left: 0;
     }
-    .about::before{
+    section::before{
         grid-area: item1;
     }
-    .about::after{
+    section::after{
         grid-area: item2;
     }
-    .about article{
+    article{
         grid-area: title;
         padding: 1em;
         margin-bottom: 2em;
@@ -65,21 +66,20 @@
         padding: .2em 0;
     }
 
-        /* MEDIA QUERY TABLET = 434px */
-        @media (min-width: 27.2rem) {
-            article::after{    
-                right: 0;
-                left: unset;
-            }
+    /* MEDIA QUERY TABLET = 434px */
+    @media (min-width: 27.2rem) {
+        article::after{    
+            right: 0;
+            left: unset;
         }
-
+    }
 
     /* MEDIA QUERY TABLET = 768px */
     @media (min-width: 48rem) {
-        .about{
+        section{
             padding: 0 1.5em;
         }
-        .about article{
+        article{
             padding: 2em;
         }
         article::before, article::after{

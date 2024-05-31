@@ -106,7 +106,7 @@
         }
         h1{
             grid-area: title;
-            font-size: 5.5em;
+            font-size: 4.5em;
             margin: .5em 0;
         }
         .hero-title p{
@@ -119,6 +119,13 @@
             position:static;
             justify-content: flex-start;
             padding: 0;
+        }
+    }
+
+    /* MEDIA QUERY TABLET = 1250px */
+    @media (min-width: 78.1rem) {
+        h1{
+        font-size: 5em;
         }
     }
 
