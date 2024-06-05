@@ -20,9 +20,9 @@
         display: grid;
         justify-items: center;
         align-items: center;
-        grid-template-columns: 3em 2fr 3em;;
+        grid-template-columns: 21% 2fr 21%;
         grid-template-areas: "item1 title item2";
-        min-height: 60vh;
+        min-height: 50vh;
     }
     section::before, section::after {
         content: "";
@@ -36,7 +36,7 @@
         position: absolute;
         background-color: var(--secondary-color);
         height: 2px;
-        width: 1.5em;
+        width: 10.5%;
     }
     article::before{    
         top: 10.5em;
@@ -83,10 +83,19 @@
             padding: 2em;
         }
         article::before, article::after{
-            width: 3em;
+            width: 12.7%;
+            max-width: 7.3em;
         }
         h2 {
             font-size: 5.5em;
+        }
+    }
+
+    /* MEDIA QUERY TABLET = 972px */
+    @media (min-width: 60.75rem) {
+        article::before, article::after{
+            width: 12.4%;
+            max-width: 9.8em;
         }
     }
 
@@ -94,6 +103,14 @@
     @media (min-width: 78.1rem) {
         h2{
             font-size: 6em;
+        }
+    }
+
+    /* MEDIA QUERY TABLET = 1335px */
+    @media (min-width: 83.43rem) {
+        article::before, article::after{
+            width: 11.7%;
+            max-width: 13.8em;
         }
     }
 </style>

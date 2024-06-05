@@ -24,7 +24,7 @@
         background-size: cover;
         background-color: rgb(51, 51, 51);
         background-repeat: no-repeat;
-        height: 75vh;
+        height: 79vh;
         background-position-x: 35%;
         background-position-y: -55px;
     }
@@ -35,9 +35,13 @@
     }
 
     footer{
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
         display: flex;
         justify-content: center;
         align-items: center;
+        height: 100vh;
         padding: 5em 0;
         background-color: var(--accent-dark-color);
     }
@@ -48,9 +52,17 @@
         position: absolute;
         border-top: none;
         border-bottom: none;
-        height: 71vh;
+        height: 100%;
         width: 75%;
         margin: 0 auto;
+    }
+
+    /* MEDIA QUERY TABLET = 768px */
+    @media (min-width: 48rem) {
+        footer{
+            height: unset;
+        }
+
     }
 
 </style>

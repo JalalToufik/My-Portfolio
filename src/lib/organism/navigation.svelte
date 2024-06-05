@@ -17,9 +17,9 @@
     </a>
     <nav class:active={navActive}>
         <ul role="menu">
-            <li><a href="#About" on:click={toggleNav}>About</a></li>
-            <li><a href="#Projects" on:click={toggleNav}>Projects</a></li>
-            <li><a href="#Contact" on:click={toggleNav}>Contact</a></li>
+            <li><a href="#About" on:click={toggleNav}>//About</a></li>
+            <li><a href="#Projects" on:click={toggleNav}>//Projects</a></li>
+            <li><a href="#Contact" on:click={toggleNav}>//Contact</a></li>
         </ul>
     </nav>
 </section>
@@ -55,7 +55,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 2.5em;
+        gap: 2em;
         padding: 5em 0;
         font-size: 2em;
     }
@@ -139,11 +139,11 @@
             display: none;
         }
         nav {
-
             display: flex;
             background: none;
             padding: .7em 2.5em;
             width: 100%;
+            height: unset;
             opacity: 1;
             visibility: visible;
             transform: none;
@@ -162,7 +162,7 @@
             padding: 0 2.5em;
         }
         .nav-border::before{
-            width: .5em;
+            width: 3.5em;
         }
         .nav-border::after{
             content: "";
@@ -177,4 +177,16 @@
             font-size: 2.5em;
         }
     }
+
+    /* MEDIA QUERY TABLET = 1250px */
+    @media (min-width: 78.1rem) {
+        .nav-border{
+            top: 3.5em;
+        }
+
+        nav ul{
+            font-size: 1.2em;
+        }
+    }
+
 </style>

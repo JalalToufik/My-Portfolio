@@ -5,21 +5,20 @@
 <div class="hero-container">
     <div class="hero-title">
         <h1> 
-            <span>F</span>ront End
-            Developer
+            <span>Let's</span> Craft the Reality You Envision
         </h1>
-        <p> Jalal Toufik</p>
+        <h2>Your Vision, My Expertise</h2>
+        <p> Jalal Toufik | <span>Frontend Developer</span></p>
         <div>
-            <a class="btn-contact" href="#contact">Contact me</a>
+            <a class="btn-contact" href="#Contact">Contact me</a>
         </div>
     </div>
 </div>  
 
 <style>
-
     .hero-container{
         display: flex;
-        height: 95%;
+        height: 100%;
         padding: 3em;
     }
 
@@ -41,14 +40,20 @@
         color: var(--accent-light-color);
     }
     h1{
-        font-family: var(--hero-title-font);
+        font-family: var(--hero-font);
         font-size: 2.5em;
-        letter-spacing: .05em;
         line-height: 106%;
-        max-width: 7em;
+        max-width: 10em;
     }
-    h1 span, .hero-title {
+    h2, p span {
         color: var(--primary-color);
+    }
+
+    h2{
+        font-size: 2em;
+        margin: 0 .2em ;
+        letter-spacing: 5px;
+        font-family:var(--hero-title-font) ;
     }
     p, a{
         letter-spacing: .1em;
@@ -62,11 +67,11 @@
         padding: 1em 0;
     }
     .hero-title p{
-        font-size: 1.3em;
+        font-size: 1.2em;
         color: var(--accent-light-color);
         font-family: var(--hero-title-font);
         text-transform: uppercase;
-        padding: 1em 0 0 0;
+        padding: 4em 0 0 0;
     }
     .btn-contact{
         width: 7.5em;
@@ -90,10 +95,13 @@
         h1{
             font-size: 3.5em;
         }
-}
+    }
 
     /* MEDIA QUERY TABLET = 768px */
     @media (min-width: 48rem) {
+        .hero-container{
+            padding: 7em 6em;
+        }
         .hero-title{
             display: grid;
             justify-content: start;
@@ -108,6 +116,9 @@
             grid-area: title;
             font-size: 4.5em;
             margin: .5em 0;
+        }
+        h2{
+            grid-area: title;
         }
         .hero-title p{
             grid-area: myName;
@@ -124,8 +135,9 @@
 
     /* MEDIA QUERY TABLET = 1250px */
     @media (min-width: 78.1rem) {
+
         h1{
-        font-size: 5em;
+            font-size: 5.5em;
         }
     }
 
