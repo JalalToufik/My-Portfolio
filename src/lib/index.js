@@ -10,6 +10,7 @@ export { default as HeroHeader } from './molecule/hero-header.svelte'
 export { default as AboutMe } from './molecule/about-me.svelte'
 export { default as SkillBar } from './molecule/skill-bar.svelte'
 export { default as Projects } from './molecule/projects.svelte'
+export { default as Contact } from './molecule/contact.svelte'
 // ========== Organisms ==========
 
 export { default as Navigation } from './organism/navigation.svelte'

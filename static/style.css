@@ -24,13 +24,16 @@ html {
 :root {
     --primary-color: #FFAA00;
     --secondary-color: #1A1A1A;
+
     --accent-color: #A7A599;
 	--accent-light-color:#E5DFD3;
+    --accent-dark-color: #656563;
+    --accent-darkest-color: #242423;
 
     --logo-font: "Molengo", sans-serif;
 	--hero-title-font: "Neue-Montreal-Book", sans-serif;
-    --header-font: "Khula", sans-serif;
-	
+    --header-font: "League Gothic", sans-serif;
+    --label-font: "Khula", sans-serif;
 	--margin: 2rem;
 	--padding: 2rem;
 	--bradius: 15px;
@@ -43,5 +46,5 @@ body{
 h2{
     font-size: 4.5em;
     text-transform: uppercase;
-    font-family: "League Gothic", sans-serif;
+    font-family: var(--header-font);
 }

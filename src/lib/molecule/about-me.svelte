@@ -39,7 +39,7 @@
         width: 1.5em;
     }
     article::before{    
-        bottom: 6.5em;
+        top: 10.5em;
         left: 0;
     }
     article::after{    
@@ -84,6 +84,16 @@
         }
         article::before, article::after{
             width: 3em;
+        }
+        h2 {
+            font-size: 5.5em;
+        }
+    }
+
+    /* MEDIA QUERY TABLET = 1250px */
+    @media (min-width: 78.1rem) {
+        h2{
+            font-size: 6em;
         }
     }
 </style>

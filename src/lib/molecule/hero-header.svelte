@@ -5,7 +5,7 @@
 <div class="hero-container">
     <div class="hero-title">
         <h1> 
-            <span>Front</span>End
+            <span>F</span>ront End
             Developer
         </h1>
         <p> Jalal Toufik</p>

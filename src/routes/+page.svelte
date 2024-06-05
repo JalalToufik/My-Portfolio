@@ -1,5 +1,5 @@
 <script>
-	import { Navigation, HeroHeader, AboutMe, SkillBar, Projects } from '$lib/index';
+	import { Navigation, HeroHeader, AboutMe, SkillBar, Projects, Contact } from '$lib/index';
 </script>
 
 <header>
@@ -13,6 +13,9 @@
     <Projects />
 </main>
 
+<footer>
+    <Contact />
+</footer>
 
 <style>
     header{
@@ -24,6 +27,30 @@
         height: 75vh;
         background-position-x: 35%;
         background-position-y: -55px;
+    }
+
+    main{
+        position: relative;
+        z-index: 1;
+    }
+
+    footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 5em 0;
+        background-color: var(--accent-dark-color);
+    }
+
+    footer::before{
+        content: "";
+        border: 2px solid var(--accent-light-color);
+        position: absolute;
+        border-top: none;
+        border-bottom: none;
+        height: 71vh;
+        width: 75%;
+        margin: 0 auto;
     }
 
 </style>
