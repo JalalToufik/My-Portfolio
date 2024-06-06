@@ -7,15 +7,18 @@
     const apiUrl = `https://api.github.com/users/${username}/repos?sort=updated&per_page=50`;
 
     // Store for repositories
+    // @ts-ignore
     let repos = writable([]);
 
     // Function to filter repositories based on specific names
+    // @ts-ignore
     function filterRepos(repos) {
         const specificRepos = [
             "bieb-in-bloei",
             "ink-web-app",
             "oba-web-app"
         ];
+        // @ts-ignore
         return repos.filter(repo => specificRepos.includes(repo.name.toLowerCase()));
     }
 
@@ -28,6 +31,7 @@
             }
             let data = await response.json();
             // Sort repositories by stargazers count in descending order and then reverse the order
+            // @ts-ignore
             data.sort((a, b) => b.stargazers_count - a.stargazers_count);
             data.reverse();
             repos.set(filterRepos(data));
@@ -44,20 +48,20 @@
     <ul>
         {#each $repos as repo}
             <li data-index="0">
-                <h3 class="card-title">
+                <h3>
                     {#if repo}
                         {repo.name}
                     {/if}
                 </h3>
-                <p class="card-description">
+                <p>
                     {#if repo}
                         {repo.description || "No description available."}
                     {/if}
                 </p>
                 <div>
-                    <a href={repo.html_url} target="_blank"> GitHub</a>
+                    <a href={repo.html_url}> GitHub</a>
                     <span>|</span>
-                    <a href={repo.homepage} target="_blank"> Website </a>
+                    <a href={repo.homepage}> Website </a>
                 </div>
 
             </li>
@@ -96,12 +100,24 @@
         border-bottom: solid 2px var(--accent-light-color);
     }
 
-    li:nth-last-of-type(1){
+    li:nth-last-of-type(3){
         padding: 0 0 1em 0;
+    }
+
+    li div{
+        font-size: .8em;
+        text-transform: uppercase;
+        padding: .6em 0 0;
     }
 
     li a{
         color: var(--primary-color);
+    }
+
+    h3{
+        font-family: var(--header-font);
+        font-size: 1.8em;
+        letter-spacing: 1.1px;
     }
 
     /* MEDIA QUERY TABLET = 768px */

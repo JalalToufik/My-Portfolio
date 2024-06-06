@@ -3,7 +3,8 @@
 </script>
 
 <section>
-    <form>
+    <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="25decdef-5f8c-436d-bbf1-9c2af8bda1e4">
         <fieldset>
             <legend id="Contact">Contact me</legend>
 
@@ -16,7 +17,7 @@
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="3" cols="33"></textarea>
 
-            <button>Send</button>
+            <button type="submit">Send</button>
         </fieldset>
     </form>
     <article>
@@ -95,6 +96,39 @@
     form input:focus, textarea:focus{
         background-color: white;
         color: black;
+    }
+
+    textarea{
+        resize: none;
+    }
+    form input:valid {
+        border-color:white;
+    }
+    form input:invalid {
+        border-color:red;
+    }
+    form:valid button {
+        opacity:1
+    }
+    button:focus {
+        transform: scale(1.1, 1.1);
+    }
+    button{
+        padding: 0.2em .5em;
+        z-index: 0;
+        background-color: unset;
+        letter-spacing: 5px;
+        border-radius: 2em;
+        border: solid 2px var(--primary-color);
+        color: var(--primary-color);
+        opacity:0;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    button:hover{
+        background-color:var(--accent-light-color);
+        color: var(--secondary-color);
+        border-color: var(--accent-light-color);
     }
 
     /* MEDIA QUERY TABLET = 768px */

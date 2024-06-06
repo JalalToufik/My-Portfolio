@@ -181,11 +181,11 @@
     /* MEDIA QUERY TABLET = 1250px */
     @media (min-width: 78.1rem) {
         .nav-border{
-            top: 3.5em;
+            top: 3.2em;
         }
 
         nav ul{
-            font-size: 1.2em;
+            font-size: 1.1em;
         }
     }
 
