@@ -2,42 +2,34 @@
     import { onMount } from "svelte";
     import { writable } from "svelte/store";
 
-    // GitHub API variables
+   // GitHub API variables
     const username = "JalalToufik";
     const apiUrl = `https://api.github.com/users/${username}/repos?sort=updated&per_page=50`;
 
     // Store for repositories
-    // @ts-ignore
-    let repos = writable([]);
+    const repos = writable([]);
 
-    // Function to filter repositories based on specific names
-    // @ts-ignore
+    /**
+     * @param {any[]} repos An array of repository objects.
+     */
     function filterRepos(repos) {
-        const specificRepos = [
-            "bieb-in-bloei",
-            "ink-web-app",
-            "oba-web-app"
-        ];
-        // @ts-ignore
+        const specificRepos = ["bieb-in-bloei", "ink-web-app", "oba-web-app"];
         return repos.filter(repo => specificRepos.includes(repo.name.toLowerCase()));
     }
-
+        
     onMount(async () => {
-        // Fetch and set repositories
-        try {
-            const response = await fetch(apiUrl);
-            if (!response.ok) {
-                throw new Error(`Error fetching repos: ${response.statusText}`);
-            }
-            let data = await response.json();
-            // Sort repositories by stargazers count in descending order and then reverse the order
-            // @ts-ignore
-            data.sort((a, b) => b.stargazers_count - a.stargazers_count);
-            data.reverse();
-            repos.set(filterRepos(data));
+    try {
+        const response = await fetch(apiUrl);
+        let data = await response.json();
+
+        const filteredRepos = filterRepos(data);
+        // @ts-ignore
+        repos.set(filteredRepos.sort((a, b) => {
+            const order = ["bieb-in-bloei", "ink-web-app", "oba-web-app"];
+            return order.indexOf(a.name.toLowerCase()) - order.indexOf(b.name.toLowerCase());
+        }));
         } catch (error) {
-            console.error("Error fetching repos:", error);
-            // You can display an error message to the user here
+        console.error("Error fetching repos:", error);
         }
     });
 </script>
@@ -59,15 +51,17 @@
                     {/if}
                 </p>
                 <div>
-                    <a href={repo.html_url}> GitHub</a>
-                    <span>|</span>
-                    <a href={repo.homepage}> Website </a>
+                    <a href={repo.html_url} target="_blank">GitHub</a>
+                    {#if repo.homepage}
+                        <span>|</span>
+                        <a href={repo.homepage} target="_blank">Website</a>
+                    {/if}
                 </div>
-
             </li>
         {/each}
     </ul>
 </section>
+
 
 <style>
     section {
@@ -77,7 +71,7 @@
         justify-items: center;
         align-items: center;
         grid-template-columns: 2fr 2fr;
-        min-height: 80vh;
+        min-height: 90vh;
     }
     section h2 {
         color: var(--accent-light-color);
@@ -125,6 +119,9 @@
         section h2 {
             font-size: 5.5em;
         }
+        h3{
+            font-size: 2.5em;
+        }
     }
 
     /* MEDIA QUERY TABLET = 1250px */
@@ -133,7 +130,7 @@
             grid-template-columns: 2fr 1.8fr;
         }
         section h2 {
-            font-size: 6em;
+            font-size: 7em;
         }
     }
 </style>

@@ -22,7 +22,7 @@
         align-items: center;
         grid-template-columns: 21% 2fr 21%;
         grid-template-areas: "item1 title item2";
-        min-height: 50vh;
+        min-height: 60vh;
     }
     section::before, section::after {
         content: "";

@@ -89,6 +89,7 @@
         background-color: var(--accent-darkest-color);
         font-family: var(--label-font);
         border: none;
+        border-radius: 5px;
         color: white;
         padding: .5em;
     }
@@ -107,21 +108,20 @@
     form input:invalid {
         border-color:red;
     }
-    form:valid button {
-        opacity:1
-    }
     button:focus {
         transform: scale(1.1, 1.1);
     }
     button{
-        padding: 0.2em .5em;
+        margin-top: 1em;
+        padding: .7em .5em;
         z-index: 0;
-        background-color: unset;
+        background-color: unset;   
+        width: 30%;
         letter-spacing: 5px;
-        border-radius: 2em;
+        border-radius: 2.1em;
         border: solid 2px var(--primary-color);
         color: var(--primary-color);
-        opacity:0;
+        font-family: var(--label-font);
         text-transform: uppercase;
         font-weight: bold;
     }
@@ -152,6 +152,11 @@
         form{
             padding: unset;
         }
+        fieldset{
+            width: 70%;
+        }
     }
+
+
 
 </style>
