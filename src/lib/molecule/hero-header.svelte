@@ -18,7 +18,7 @@
 <style>
     .hero-container{
         display: flex;
-        height: 100%;
+        min-height: 80vh;
         padding: 3em;
     }
 
@@ -100,7 +100,7 @@
     /* MEDIA QUERY TABLET = 768px */
     @media (min-width: 48rem) {
         .hero-container{
-            padding: 7em 6em;
+            padding: 6em;
         }
         .hero-title{
             display: grid;

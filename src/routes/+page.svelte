@@ -24,7 +24,7 @@
         background-size: cover;
         background-color: rgb(51, 51, 51);
         background-repeat: no-repeat;
-        height: 79vh;
+        min-height: 79vh;
         background-position-x: 35%;
         background-position-y: -55px;
     }
@@ -41,7 +41,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        min-height: 100vh;
         padding: 5em 0;
         background-color: var(--accent-dark-color);
     }
