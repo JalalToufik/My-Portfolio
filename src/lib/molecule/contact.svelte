@@ -9,13 +9,13 @@
             <legend id="Contact">Contact me</legend>
 
             <label for="name">Name</label>
-            <input id="name" required type="text">
+            <input id="name" type="text" required>
 
             <label for="mail" >E-mail</label>
             <input id="mail" type="email" required>  
 
             <label for="message">Message</label>
-            <textarea id="message" name="message" rows="3" cols="33"></textarea>
+            <textarea id="message" name="message" rows="3" cols="33" required></textarea>
 
             <button type="submit">Send</button>
         </fieldset>
@@ -113,11 +113,11 @@
     }
     button{
         margin-top: 1em;
-        padding: .7em .5em;
-        z-index: 0;
-        background-color: unset;   
-        width: 30%;
-        letter-spacing: 5px;
+        font-size: 18px;
+        padding: .2em 0 0em;
+        width: 6em;
+        letter-spacing: -1px;
+        background-color: unset;
         border-radius: 2.1em;
         border: solid 2px var(--primary-color);
         color: var(--primary-color);
