@@ -50,7 +50,7 @@
     }
 
     h2{
-        font-size: 2em;
+        font-size: 1.3em;
         margin: 0 .2em ;
         letter-spacing: 5px;
         font-family:var(--hero-title-font) ;

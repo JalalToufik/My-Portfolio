@@ -98,7 +98,6 @@
         background-color: white;
         color: black;
     }
-
     textarea{
         resize: none;
     }
