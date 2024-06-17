@@ -2,21 +2,21 @@
 
 </script>
 
-<section>
-    <form action="https://api.web3forms.com/submit" method="POST">
+<section aria-labelledby="Contact"> 
+    <form action="https://api.web3forms.com/submit" method="POST" novalidate>
         <input type="hidden" name="access_key" value="25decdef-5f8c-436d-bbf1-9c2af8bda1e4">
         <fieldset>
             <legend id="Contact">Contact me</legend>
 
-            <label for="name">Name</label>
-            <input id="name" type="text" required>
+                <label for="name">Name</label>
+                <input id="name" type="text" name="name" required aria-invalid="false">
 
-            <label for="mail" >E-mail</label>
-            <input id="mail" type="email" required>  
+                <label for="mail">E-mail</label>
+                <input id="mail" type="email" name="email" required aria-invalid="false">  
 
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="3" cols="33" required></textarea>
-
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="3" cols="33" required aria-invalid="false"></textarea>
+            
             <button type="submit">Send</button>
         </fieldset>
     </form>
@@ -25,7 +25,6 @@
         <p>mj.toufik@hotmail.com</p>
     </article>
 </section>
-
 <style>
     section{
         display: grid;
@@ -112,7 +111,7 @@
     }
     button{
         margin-top: 1em;
-        font-size: 18px;
+        font-size: 1.1em;
         padding: .2em 0 0em;
         width: 6em;
         letter-spacing: -1px;
