@@ -11,10 +11,10 @@
     <div class="nav-border">
         <a href="/" class="logo">J<span>T</span></a>
     </div>
-    <!-- svelte-ignore a11y-invalid-attribute -->
-    <a href="javascript:void(0)" class="menu-icon" on:click={toggleNav}>
+
+    <button class="menu-icon" on:click={toggleNav}>
         <img class="menu" src={navActive ? CloseMenu : OpenMenu} alt="Menu button"/>
-    </a>
+    </button>
     <nav class:active={navActive}>
         <ul role="menu">
             <li><a href="#About" on:click={toggleNav}>//About</a></li>
@@ -58,6 +58,7 @@
         gap: 2em;
         padding: 5em 0;
         font-size: 2em;
+        scroll-behavior: smooth;
     }
 
     nav li{
@@ -81,6 +82,10 @@
         top: 0;
         right: 0;
         z-index: 100;
+    }
+
+    .menu-icon{
+        border: none;
     }
     nav a{
         color: var(--accent-light-color);
