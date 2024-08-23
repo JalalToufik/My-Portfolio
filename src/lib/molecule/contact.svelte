@@ -1,23 +1,21 @@
-<script>
 
-</script>
 
-<section aria-labelledby="Contact"> 
-    <form action="https://api.web3forms.com/submit" method="POST" novalidate>
+<section aria-labelledby="Contact form"> 
+    <form action="https://api.web3forms.com/submit" method="POST">
         <input type="hidden" name="access_key" value="25decdef-5f8c-436d-bbf1-9c2af8bda1e4">
         <fieldset>
             <legend id="Contact">Contact me</legend>
 
                 <label for="name">Name</label>
-                <input id="name" type="text" name="name" required aria-invalid="false">
+                <input id="name" type="text" name="name" required>
 
                 <label for="mail">E-mail</label>
-                <input id="mail" type="email" name="email" required aria-invalid="false">  
+                <input id="mail" type="email" name="email" required>  
 
                 <label for="message">Message</label>
-                <textarea id="message" name="message" rows="3" cols="33" required aria-invalid="false"></textarea>
+                <textarea id="message" name="message" rows="3" cols="33" required></textarea>
             
-            <button type="submit">Send</button>
+                <input class="button" type="submit" value="Verzenden" />
         </fieldset>
     </form>
     <article>
@@ -25,6 +23,7 @@
         <p>mj.toufik@hotmail.com</p>
     </article>
 </section>
+
 <style>
     section{
         display: grid;
@@ -100,20 +99,30 @@
     textarea{
         resize: none;
     }
-    form input:valid {
-        border-color:white;
+    /* form focus valid  */
+    fieldset input[type='text']:valid,
+    fieldset input[type='email']:valid,
+    fieldset textarea:valid { 
+        border: 2px solid green;
+        background-color: rgb(237 255 237);
+        color: black;
     }
-    form input:invalid {
-        border-color:red;
+    /* form focus invalid  */
+    fieldset input[type='text']:user-invalid,
+    fieldset input[type='email']:user-invalid,
+    fieldset textarea:user-invalid { 
+        border: 2px solid red;
+        background-color: #fffcfc;
+        color: black;
     }
-    button:focus {
+    .button:focus {
         transform: scale(1.1, 1.1);
     }
-    button{
+    .button{
         margin-top: 1em;
         font-size: 1.1em;
         padding: .2em 0 0em;
-        width: 6em;
+        width: 7em;
         letter-spacing: -1px;
         background-color: unset;
         border-radius: 2.1em;
@@ -123,7 +132,7 @@
         text-transform: uppercase;
         font-weight: bold;
     }
-    button:hover{
+    .button:hover{
         background-color:var(--accent-light-color);
         color: var(--secondary-color);
         border-color: var(--accent-light-color);
