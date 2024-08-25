@@ -12,6 +12,7 @@
 html {
 	font-family: 'Khule', sans-serif;
     line-height: 1.6;
+	scroll-behavior: smooth;
 }
 
 * {
