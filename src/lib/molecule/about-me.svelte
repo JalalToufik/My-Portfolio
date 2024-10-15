@@ -6,10 +6,10 @@
     <article>
         <h2>About me</h2>
         <p>
-            I'm Jalal Toufik, a passionate frontend developer on the verge of graduating from Hogeschool van Amsterdam (HvA) with a degree in FDND - Frontend development.
+            Hi, I'm Jalal! As a frontend developer and designer, I combine my love for code with a passion for aesthetics. 
         <p/>
         <p>
-            During my studies, I've developed a strong foundation in HTML, CSS, and JavaScript, honing my skills through hands-on projects and coursework.
+            During my studies at the HvA, I've learned how to transform technical knowledge into beautiful, interactive web pages. Whether it's building a responsive website or animating complex UI elements, I love enhancing user experiences.
         </p>
     </article>
 </section>
