@@ -13,7 +13,7 @@
      * @param {any[]} repos An array of repository objects.
      */
     function filterRepos(repos) {
-        const specificRepos = ["bieb-in-bloei", "ink-web-app", "oba-web-app"];
+        const specificRepos = [ "ink-web-app","todo-app","spelen-met-css"];
         return repos.filter(repo => specificRepos.includes(repo.name.toLowerCase()));
     }
         
@@ -25,7 +25,7 @@
         const filteredRepos = filterRepos(data);
         // @ts-ignore
         repos.set(filteredRepos.sort((a, b) => {
-            const order = ["bieb-in-bloei", "ink-web-app", "oba-web-app"];
+            const order = [ "ink-web-app","todo-app","oba-web-app"];
             return order.indexOf(a.name.toLowerCase()) - order.indexOf(b.name.toLowerCase());
         }));
         } catch (error) {
